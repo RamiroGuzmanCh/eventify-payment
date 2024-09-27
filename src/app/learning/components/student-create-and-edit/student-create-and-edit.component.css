@@ -1,0 +1,60 @@
+
+.form-section {
+  display: table;
+  background-color: #ffffff; /* Fondo blanco para la sección del formulario */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F8FAFC; /* Color adicional para el fondo */
+  color: #0F172A; /* Texto azul oscuro */
+}
+h4 {
+  font-family: 'Playfair Display', serif;
+  color: #0F1A2C; /* Color principal para los títulos */
+}
+.form-row {
+  display: table-cell;
+  max-width: 2400px;
+}
+
+/* Add button styles specifically */
+.add-button {
+  background-color: #F6AC0F; /* Color dorado */
+  color: #ffffff; /* Texto blanco */
+}
+.add-button:hover {
+  background-color: #d49a0e; /* Color dorado más oscuro al pasar el mouse */
+}
+.form-row .mat-raised-button {
+  margin-right: 8px;
+}
+
+.form-row .mat-form-field {
+  margin-right: 8px;
+}
+.form-row #date-form-field {
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 3.56cm;
+}
+.form-row #capacity-form-field {
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 3cm;
+}
+
+.form-row #orid-form-field {
+  width: 4cm;
+}
+.form-row #desc-form-field {
+  width: 100%;
+}
+
+/* Estilo opcional para ajustar el textarea */
+mat-form-field textarea {
+  resize: vertical; /* Permite el redimensionamiento vertical */
+}

@@ -1,0 +1,64 @@
+<!-- Student catalogue -->
+<div class="table-wrapper">
+  <h3>{{ 'title.events' | translate }}</h3>
+
+  <!--Add/Edit Form-->
+  <app-student-create-and-edit (editCanceled)="onCancelEdit()"
+                               (studentAdded)="onStudentAdded($event)"
+                               (studentUpdated)="onStudentUpdated($event)"
+                               [editMode] = "isEditMode"
+                               [student]="studentData"/>
+  <!-- Data Table -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"
+         matSort matSortActive="id" matSortDirection="asc">
+
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> {{ 'student.id' | translate }} </th>
+      <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.name' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.date' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.description' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>{{ element.description }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+        <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.location' | translate }}</th>
+        <td *matCellDef="let element" mat-cell>{{ element.location }}</td>
+
+    </ng-container>
+
+    <ng-container matColumnDef="capacity">
+        <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.capacity' | translate }}</th>
+        <td *matCellDef="let element" mat-cell>{{ element.capacity }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="organizer_id">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header>{{ 'student.organizer_id' | translate }}</th>
+          <td *matCellDef="let element" mat-cell>{{ element.organizer_id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell> {{ 'student.actions' | translate }}</th>
+      <td *matCellDef="let element" mat-cell>
+        <a (click)="onEditItem(element)" href="javascript:void(0)"><mat-icon>edit</mat-icon></a>
+        <a (click)="onDeleteItem(element)" href="javascript:void(0)"><mat-icon>delete</mat-icon></a>
+        <a [routerLink]="['/payments']" href="javascript:void(0)"><mat-icon>payment</mat-icon></a> <!-- Este es el nuevo botón de pago -->
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns:displayedColumns" [ngClass]="{'editable-row': studentData.id === row.id }" mat-row></tr>
+  </table>
+  <!-- Paginator child component-->
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

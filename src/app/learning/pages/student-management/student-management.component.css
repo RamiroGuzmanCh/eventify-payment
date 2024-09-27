@@ -1,0 +1,51 @@
+/* Estilos generales para la tabla */
+.table-wrapper {
+  width: 1024px;
+  margin: 50px auto;
+  font-family: 'Poppins', sans-serif; /* Fuente general */
+}
+
+.table-wrapper h3 {
+  font-family: 'Playfair Display', serif; /* Fuente para el título */
+  color: #0F1A2C; /* Color principal */
+  margin-bottom: 20px;
+  text-align: center; /* Centrar el título */
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Colapsar bordes */
+}
+
+.mat-header-cell {
+  background-color: #F6AC0F; /* Color secundario para encabezados */
+  color: #ffffff; /* Texto blanco en los encabezados */
+  padding: 12px; /* Espaciado en encabezados */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.mat-cell {
+  color: #64748b; /* Texto en gris azulado para las celdas */
+  padding: 12px; /* Espaciado en celdas */
+}
+
+/* Estilo para las filas editables */
+.editable-row {
+  background-color: lightblue; /* Color azul en modo de edición */
+}
+
+/* Estilos para acciones en la tabla */
+.mat-icon {
+  cursor: pointer; /* Cursor pointer para íconos */
+  color: #0F1A2C; /* Color principal para íconos */
+}
+
+.mat-icon:hover {
+  color: #F6AC0F; /* Color secundario al pasar el ratón */
+}
+
+/* Estilos para el paginador */
+mat-paginator {
+  margin-top: 20px; /* Espacio superior */
+}

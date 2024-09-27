@@ -1,0 +1,51 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Realizar Pago</h1>
+    <mat-dialog-content>
+        <p>Ingresa los datos para realizar el pago</p>
+
+        <form [formGroup]="form" class="form-container-creation">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre del titular de la tarjeta</mat-label>
+                <mat-icon matPrefix>account_circle</mat-icon>
+                <input matInput required formControlName="cardHolderName" />
+                <mat-error>El nombre es requerido</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Número de la tarjeta</mat-label>
+                <mat-icon matPrefix>credit_card</mat-icon>
+                <input matInput required formControlName="cardNumber" maxlength="16" />
+                <mat-error>El número de tarjeta debe tener 16 dígitos</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha de expiración (MM/YY)</mat-label>
+                <input matInput required formControlName="expirationDate" placeholder="MM/YY" />
+                <mat-error>La fecha de expiración es requerida</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>CVV</mat-label>
+                <input matInput required type="password" maxlength="4" formControlName="cvv" />
+                <mat-error>El CVV debe tener 3 o 4 dígitos</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Monto</mat-label>
+                <input matInput required type="number" formControlName="amount" />
+                <mat-error>El monto es requerido y debe ser mayor a 0</mat-error>
+            </mat-form-field>
+
+            <div class="buttons-container">
+                <button mat-stroked-button color="primary" (click)="onCancel()">
+                    Cancelar
+                </button>
+                <button mat-raised-button color="primary" (click)="processPayment()" [disabled]="form.invalid">
+                    Pagar
+                </button>
+            </div>
+
+        </form>
+    </mat-dialog-content>
+</div>

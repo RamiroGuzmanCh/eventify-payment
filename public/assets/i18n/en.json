@@ -1,0 +1,26 @@
+{
+  "filter": {
+    "label": "Filter",
+    "placeholder": "Enter text to filter"
+  },
+  "title": {
+    "events": "Events",
+    "add": "New Student",
+    "edit": "Edit Student"
+  },
+  "student": {
+    "id": "Event ID",
+    "name": "Name",
+    "description": "Description",
+    "date": "Date",
+    "location": "Location",
+    "capacity": "Capacity",
+    "organizer_id": "Organizer ID",
+    "actions": "Actions"
+  },
+  "footer": {
+    "rights": "Copyright © 2024 {{ api }}, All rights reserved",
+    "intro": "Developed ",
+    "author": "by {{ Netvision }} Team"
+  }
+}
