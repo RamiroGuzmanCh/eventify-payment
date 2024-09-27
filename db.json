@@ -1,19 +1,48 @@
 {
-  "posts": [
+  "students": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Ultra",
+      "date": "2025-02-06",
+      "location": "Costa 21",
+      "capacity": 10000,
+      "organizer_id": 1,
+      "description": "El evento mas grande de musica electronica",
+      "id": 1
+    },
+    {
+      "name": "concierto",
+      "date": "2026-02-03",
+      "location": "lima",
+      "capacity": 15000,
+      "organizer_id": 1,
+      "description": "concierto en lima",
+      "id": 2
     }
   ],
-  "comments": [
+  "payments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "cardHolderName": "Juan Perez",
+      "cardNumber": "1234567812345678",
+      "expirationDate": "12/25",
+      "cvv": "123",
+      "amount": 150.75
+    },
+    {
+      "cardHolderName": "Liam Ramos",
+      "cardNumber": "9876542131658951",
+      "expirationDate": "06/24",
+      "cvv": "152",
+      "amount": 158,
+      "id": 2
+    },
+    {
+      "cardHolderName": "qqrvqr3vqr3v",
+      "cardNumber": "1233559595292623",
+      "expirationDate": "06/28",
+      "cvv": "123",
+      "amount": 180,
+      "id": 3
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
