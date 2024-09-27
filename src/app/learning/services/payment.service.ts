@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
     providedIn: 'root'
 })
 export class PaymentService {
-    private apiUrl = 'http://localhost:3000/payments';  // URL del json-server
+    private apiUrl = 'https://my-json-server.typicode.com/RamiroGuzmanCh/eventify-payment/payments';  // URL del json-server
 
     constructor(private http: HttpClient) {}
 
